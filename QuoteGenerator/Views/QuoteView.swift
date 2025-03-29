@@ -28,17 +28,15 @@ struct QuoteView: View {
             if let currentQuote = viewModel.currentQuote {
                 
                 VStack {
-                    Text(currentQuote.quoteText)
+                    Text(currentQuote.quote)
                         .padding(.bottom, 20)
                         .font(.title)
                     
-                    Text("—— \(currentQuote.quoteAuthor)")
+                    Text("—— \(currentQuote.author)")
                         .font(.system(size: 20))
                         .fontWeight(.bold)
                         .padding(.bottom, 20)
                     
-                    Text(currentQuote.quoteLink)
-
                 }
                 .padding()
                 .multilineTextAlignment(.center)

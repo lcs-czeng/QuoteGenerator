@@ -45,7 +45,7 @@ class QuoteViewModel {
            func fetchQuote() async {
                
                // 1. Attempt to create a URL from the address provided
-               let endpoint = "https://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=en"
+               let endpoint = "https://random-quotes-freeapi.vercel.app/api/random"
                guard let url = URL(string: endpoint) else {
                    print("Invalid address for JSON endpoint.")
                    return
