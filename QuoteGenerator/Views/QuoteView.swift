@@ -29,6 +29,9 @@ struct QuoteView: View {
                     Text("—— \(currentQuote.quoteAuthor)")
                         .font(.system(size: 20))
                         .fontWeight(.bold)
+                        .padding(.bottom, 20)
+                    
+                    Text(currentQuote.quoteLink)
 
                 }
                 .padding()
