@@ -14,6 +14,12 @@ struct QuoteView: View {
     // Create the view model (temporarily show the default Quote)
     @State var viewModel = QuoteViewModel()
     
+    // Controls button visibility
+    @State var buttonOpacity = 0.0
+    
+    // Starts a timer to wait on revealing button to get new 
+    @State var buttonTimer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
+    
     // MARK: Computed properties
     var body: some View {
         VStack {
@@ -36,6 +42,39 @@ struct QuoteView: View {
                 }
                 .padding()
                 .multilineTextAlignment(.center)
+                
+                Button {
+                 
+                    // Hide punchline and button
+                    withAnimation {
+                        viewModel.currentQuote = nil
+                        buttonOpacity = 0.0
+                    }
+                                        
+                    // Get a new 
+                    Task {
+                        await viewModel.fetchQuote()
+                    }
+                    
+                    // Restart timers
+                    buttonTimer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
+                    
+                } label: {
+                 
+                    Text("New")
+                    
+                }
+                .buttonStyle(.borderedProminent)
+                .opacity(buttonOpacity)
+                .onReceive(buttonTimer) { _ in
+                    
+                    withAnimation {
+                        buttonOpacity = 1.0
+                    }
+                    
+                    // Stop the timer
+                    buttonTimer.upstream.connect().cancel()
+                }
             }
             
         }
