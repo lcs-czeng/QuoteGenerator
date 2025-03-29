@@ -12,7 +12,7 @@ struct QuoteView: View {
     // MARK: Stored properties
     
     // Create the view model (temporarily show the default Quote)
-    @State var viewModel = QuoteViewModel(currentQuote: exampleQuote)
+    @State var viewModel = QuoteViewModel()
     
     // MARK: Computed properties
     var body: some View {
