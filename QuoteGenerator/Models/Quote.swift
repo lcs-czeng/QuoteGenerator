@@ -7,23 +7,11 @@
 
 import Foundation
 
-struct Quote: Identifiable, Codable {
-    let id: String  // Using quoteLink as the id
+struct Quote: Codable {
     let quoteText: String
     let quoteAuthor: String
-    
-    // Custom initializer to set id from quoteLink
-    init(
-        quoteText: String,
-        quoteAuthor: String,
-        quoteLink: String
-    ) {
-        self.id = quoteLink
-        self.quoteText = quoteText
-        self.quoteAuthor = quoteAuthor
-    }
-    
-    // Since quoteLink is now id, we don’t need it as a separate property
+    let quoteLink: String
+
 }
 
 // Example
