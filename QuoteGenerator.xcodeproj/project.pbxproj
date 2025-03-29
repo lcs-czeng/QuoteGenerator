@@ -6,17 +6,24 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		16A1FCA22D987940001DF16C /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A1FC9F2D987940001DF16C /* QuoteView.swift */; };
+		16A1FCA32D987940001DF16C /* QuoteGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A1FCA02D987940001DF16C /* QuoteGeneratorApp.swift */; };
+		16A1FCA42D987940001DF16C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16A1FC9C2D987940001DF16C /* Preview Assets.xcassets */; };
+		16A1FCA52D987940001DF16C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16A1FC9E2D987940001DF16C /* Assets.xcassets */; };
+		16A1FCAA2D987987001DF16C /* QuoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A1FCA92D987982001DF16C /* QuoteViewModel.swift */; };
+		16A1FCAC2D987990001DF16C /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A1FCAB2D98798F001DF16C /* Quote.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		16A1FC8B2D987938001DF16C /* QuoteGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuoteGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16A1FC9C2D987940001DF16C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		16A1FC9E2D987940001DF16C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16A1FC9F2D987940001DF16C /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
+		16A1FCA02D987940001DF16C /* QuoteGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteGeneratorApp.swift; sourceTree = "<group>"; };
+		16A1FCA92D987982001DF16C /* QuoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewModel.swift; sourceTree = "<group>"; };
+		16A1FCAB2D98798F001DF16C /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		16A1FC8D2D987938001DF16C /* QuoteGenerator */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = QuoteGenerator;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		16A1FC882D987938001DF16C /* Frameworks */ = {
@@ -32,7 +39,7 @@
 		16A1FC822D987938001DF16C = {
 			isa = PBXGroup;
 			children = (
-				16A1FC8D2D987938001DF16C /* QuoteGenerator */,
+				16A1FCA12D987940001DF16C /* QuoteGenerator */,
 				16A1FC8C2D987938001DF16C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +50,51 @@
 				16A1FC8B2D987938001DF16C /* QuoteGenerator.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		16A1FC9D2D987940001DF16C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				16A1FC9C2D987940001DF16C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		16A1FCA12D987940001DF16C /* QuoteGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				16A1FCA02D987940001DF16C /* QuoteGeneratorApp.swift */,
+				16A1FCA72D98795B001DF16C /* Models */,
+				16A1FCA82D98795F001DF16C /* ViewModels */,
+				16A1FCA62D987956001DF16C /* Views */,
+				16A1FC9D2D987940001DF16C /* Preview Content */,
+				16A1FC9E2D987940001DF16C /* Assets.xcassets */,
+			);
+			path = QuoteGenerator;
+			sourceTree = "<group>";
+		};
+		16A1FCA62D987956001DF16C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				16A1FC9F2D987940001DF16C /* QuoteView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		16A1FCA72D98795B001DF16C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				16A1FCAB2D98798F001DF16C /* Quote.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		16A1FCA82D98795F001DF16C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				16A1FCA92D987982001DF16C /* QuoteViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +111,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				16A1FC8D2D987938001DF16C /* QuoteGenerator */,
 			);
 			name = QuoteGenerator;
 			packageProductDependencies = (
@@ -109,6 +158,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16A1FCA42D987940001DF16C /* Preview Assets.xcassets in Resources */,
+				16A1FCA52D987940001DF16C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +170,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16A1FCAC2D987990001DF16C /* Quote.swift in Sources */,
+				16A1FCAA2D987987001DF16C /* QuoteViewModel.swift in Sources */,
+				16A1FCA22D987940001DF16C /* QuoteView.swift in Sources */,
+				16A1FCA32D987940001DF16C /* QuoteGeneratorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
