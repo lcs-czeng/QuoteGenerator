@@ -8,17 +8,37 @@
 import SwiftUI
 
 struct QuoteView: View {
+    
+    // MARK: Stored properties
+    
+    // Create the view model (temporarily show the default Quote)
+    @State var viewModel = QuoteViewModel(currentQuote: exampleQuote)
+    
+    // MARK: Computed properties
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            
+            // Show a Quote if one exists
+            if let currentQuote = viewModel.currentQuote {
+                
+                VStack {
+                    Text(currentQuote.quoteText)
+                        .padding(.bottom, 20)
+                        .font(.title)
+                    
+                    Text("—— \(currentQuote.quoteAuthor)")
+                        .font(.system(size: 20))
+                        .fontWeight(.bold)
+
+                }
+                .padding()
+                .multilineTextAlignment(.center)
+            }
+            
         }
-        .padding()
     }
 }
-
+ 
 #Preview {
     QuoteView()
 }
